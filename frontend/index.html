@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <script>
+      // 防 FOUC：在首次绘制前应用本地存储的配色覆盖；无覆盖时保持 "light dark" 跟随系统。
+      try {
+        var storedScheme = localStorage.getItem('aeriscope-theme')
+        if (storedScheme === 'light' || storedScheme === 'dark') {
+          document.querySelector('meta[name="color-scheme"]').content = storedScheme
+        }
+      } catch (error) {}
+    </script>
+    <meta name="theme-color" content="#102d2b" />
+    <meta name="description" content="AeriScope 澄空：长春冬季 PM2.5 污染过程与 XGBoost 短期预警研究驾驶舱" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" />
+    <title>AeriScope · 澄空研究驾驶舱</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

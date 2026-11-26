@@ -1,0 +1,15 @@
+seed: 42
+data_source: observed
+lookback: 48
+horizon: 6
+pm25_threshold: 75.0
+splits: [0.6, 0.2, 0.2]
+heating_months: [10, 11, 12, 1, 2, 3, 4]
+epochs: 3
+batch_size: 128
+learning_rate: 0.001
+hidden_size: 24
+xgb_estimators: 140
+xgb_max_depth: 4
+xgb_learning_rate: 0.05
+max_lag_hours: 48

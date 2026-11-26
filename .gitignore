@@ -1,0 +1,16 @@
+.idea/
+.venv/
+.env
+.env.*
+__pycache__/
+*.py[cod]
+*.egg-info/
+.superpowers/
+frontend/node_modules/
+frontend/dist/
+frontend/tsconfig.tsbuildinfo
+artifacts/
+data/raw/*
+data/demo/*
+!data/raw/.gitkeep
+!data/demo/.gitkeep

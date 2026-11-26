@@ -1,0 +1,14 @@
+name: aeriscope
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: aeriscope:latest
+    restart: unless-stopped
+    ports:
+      - "${AERISCOPE_PORT:-8000}:8000"
+    volumes:
+      - ./data:/app/data
+      - ./artifacts:/app/artifacts
